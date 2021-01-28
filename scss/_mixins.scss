@@ -1,0 +1,9 @@
+@mixin container($viewports) {
+  max-width: $viewports;
+  margin: 0 auto;
+}
+
+@mixin link {
+  text-decoration: none;
+  color: $white;
+}
