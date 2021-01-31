@@ -1,14 +1,14 @@
-.header {
-  background: url('/images/desktop/image-hero.jpg');
+#header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/images/desktop/image-hero.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 60vh;
   color: $white;
 }
 
 .navigation {
-  @include container($desktop);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,7 @@
   }
 
   &-name {
-    font-size: $large-size;
+    font-size: $font-large;
   }
 
   &-links {
@@ -32,6 +32,64 @@
 
     & li:not(:last-child) {
       margin-right: 2rem;
+    }
+  }
+
+  &-hamburger {
+    display: none;
+  }
+}
+
+.heading-border {
+  border: 2px solid $white;
+  display: inline-block;
+  padding: 1.5rem 6rem 1.5rem 1.5rem;
+  margin: 8rem 0;
+
+  &-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 80px;
+    font-weight: $light;
+    text-transform: uppercase;
+
+    & span {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .navigation {
+    &-links {
+      display: none;
+    }
+
+    &-hamburger {
+      display: block;
+      cursor: pointer;
+      min-width: 25px;
+    }
+  }
+}
+
+@media (max-width: $laptop) {
+  .heading-border {
+    max-width: 100%;
+
+    &-text {
+      font-size: 60px;
+    }
+
+    @media (max-width: $tablet) {
+      &-text {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      &-text {
+        font-size: 25px;
+      }
     }
   }
 }

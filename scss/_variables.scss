@@ -4,6 +4,9 @@ $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 55%);
 $very-dark-gray: hsl(0, 0%, 41%);
 
-// Device Viewports
-$desktop: 1440px;
+// Device breakpoints
+$lg-desktop: 1440px;
+$md-desktop: 1140px;
+$laptop: 1024px;
+$tablet: 768px;
 $mobile: 375px;

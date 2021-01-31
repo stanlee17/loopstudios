@@ -1,5 +1,5 @@
-@mixin container($viewports) {
-  max-width: $viewports;
+@mixin container {
+  max-width: 80%;
   margin: 0 auto;
 }
 

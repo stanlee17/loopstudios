@@ -12,18 +12,22 @@ body {
   background-color: white;
 }
 
-.header {
-  background: url("/images/desktop/image-hero.jpg");
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/images/desktop/image-hero.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 60vh;
   color: white;
 }
 
 .navigation {
-  max-width: 1440px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,5 +61,100 @@ body {
 
 .navigation-links li:not(:last-child) {
   margin-right: 2rem;
+}
+
+.navigation-hamburger {
+  display: none;
+}
+
+.heading-border {
+  border: 2px solid white;
+  display: inline-block;
+  padding: 1.5rem 6rem 1.5rem 1.5rem;
+  margin: 8rem 0;
+}
+
+.heading-border-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 80px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.heading-border-text span {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navigation-links {
+    display: none;
+  }
+  .navigation-hamburger {
+    display: block;
+    cursor: pointer;
+    min-width: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heading-border {
+    max-width: 100%;
+  }
+  .heading-border-text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 768px) {
+  .heading-border-text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 375px) {
+  .heading-border-text {
+    font-size: 25px;
+  }
+}
+
+.leader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 10rem auto;
+}
+
+.leader-image {
+  min-width: 60%;
+  min-height: 100%;
+}
+
+.leader-text {
+  max-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.5;
+  padding: 10rem 0 0 6rem;
+  max-height: 40%;
+  margin-left: -150px;
+  background-color: white;
+  z-index: 1;
+}
+
+.leader-text h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.leader-text p {
+  color: #8c8c8c;
 }
 /*# sourceMappingURL=style.css.map */
