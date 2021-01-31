@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 60vh;
+  min-height: 70vh;
   color: $white;
 }
 
@@ -60,6 +60,10 @@
 
 @media (max-width: $tablet) {
   .navigation {
+    &-name {
+      font-size: $font-large;
+    }
+
     &-links {
       display: none;
     }
@@ -82,13 +86,13 @@
 
     @media (max-width: $tablet) {
       &-text {
-        font-size: 40px;
+        font-size: 45px;
       }
     }
 
     @media (max-width: $mobile) {
       &-text {
-        font-size: 25px;
+        font-size: $font-large;
       }
     }
   }
