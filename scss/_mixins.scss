@@ -3,7 +3,17 @@
   margin: 0 auto;
 }
 
-@mixin link {
+@mixin link($color) {
   text-decoration: none;
-  color: $white;
+  color: $color;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
 }

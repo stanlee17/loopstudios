@@ -9,14 +9,13 @@
 }
 
 .navigation {
-  display: flex;
+  @include flex-center;
   justify-content: space-between;
-  align-items: center;
   padding: 3rem 0rem;
 
   &-name,
   &-link {
-    @include link;
+    @include link($white);
   }
 
   &-name {
@@ -49,7 +48,7 @@
   &-text {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 80px;
-    font-weight: $light;
+    font-weight: 300;
     text-transform: uppercase;
 
     & span {

@@ -31,12 +31,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 3rem 0rem;
 }
 
@@ -127,7 +127,7 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  margin: 8rem auto;
+  margin: 10rem auto;
 }
 
 .leader-image {
@@ -137,15 +137,15 @@ body {
 
 .leader-text {
   min-width: 40%;
+  max-height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 10rem 0 0 6rem;
-  max-height: 40%;
   margin-left: -150px;
   margin-bottom: -1px;
   background-color: white;
@@ -190,5 +190,113 @@ body {
   .leader-text p {
     font-size: 15px;
   }
+}
+
+.creations-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.creations-header h1,
+.creations-header a {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.creations-header h1 {
+  font-size: 40px;
+}
+
+.creations-header a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 3px;
+  border: 1px solid black;
+  padding: 1rem 3rem;
+}
+
+.creations-content {
+  display: -ms-grid;
+  display: grid;
+  margin: 6rem auto;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+}
+
+.creations-content-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 300px;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.creations-content-image h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 2rem;
+}
+
+.creations-content-image:nth-child(1) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-deep-earth.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-deep-earth.jpg");
+}
+
+.creations-content-image:nth-child(2) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-night-arcade.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-night-arcade.jpg");
+}
+
+.creations-content-image:nth-child(3) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-soccer-team.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-soccer-team.jpg");
+}
+
+.creations-content-image:nth-child(4) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-grid.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-grid.jpg");
+}
+
+.creations-content-image:nth-child(5) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-from-above.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-from-above.jpg");
+}
+
+.creations-content-image:nth-child(6) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-pocket-borealis.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-pocket-borealis.jpg");
+}
+
+.creations-content-image:nth-child(7) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-curiosity.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-curiosity.jpg");
+}
+
+.creations-content-image:nth-child(8) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7))), url("/images/desktop/image-fisheye.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("/images/desktop/image-fisheye.jpg");
 }
 /*# sourceMappingURL=style.css.map */
