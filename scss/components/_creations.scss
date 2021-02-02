@@ -12,18 +12,42 @@
   & h1 {
     font-size: $font-extra;
   }
+}
 
-  & a {
-    @include link($black);
-    letter-spacing: 3px;
-    border: 1px solid $black;
-    padding: 1rem 3rem;
+.see-all,
+.see-all-mobile {
+  @include link($black);
+  letter-spacing: 3px;
+  border: 1px solid $black;
+  padding: 1rem 3rem;
+}
+
+.see-all-mobile {
+  display: none;
+  max-width: 60%;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+@media (max-width: 725px) {
+  .see-all {
+    display: none;
+  }
+
+  .see-all-mobile {
+    display: block;
+  }
+
+  .creations-header {
+    display: block;
+    text-align: center;
   }
 }
 
 .creations-content {
   display: grid;
-  margin: 6rem auto;
+  margin: 4rem auto 7rem auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
@@ -44,6 +68,12 @@
       text-transform: uppercase;
       font-weight: normal;
       padding: 2rem;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &-image {
+      min-height: 200px;
     }
   }
 
